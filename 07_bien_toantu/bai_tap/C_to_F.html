@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Celcius to Fahrenheit</title>
+</head>
+<body>
+    <h1>Chuyển đổi nhiệt độ</h1>
+    Nhập độ C cần chuyển đổi: 
+    <input type="text" id="celcius"style="text-align: right">°C <br><br>
+
+    <button onclick="convert()">Chuyển đổi sang °F</button>
+    <script>
+        function convert() {
+            let cel = parseFloat(document.getElementById("celcius").value)
+            let fah = [[9*cel]/5]+32
+
+            alert("Nhiệt độ ở °F là: " + fah,"°F")
+        }
+    </script>
+</body>
+</html>

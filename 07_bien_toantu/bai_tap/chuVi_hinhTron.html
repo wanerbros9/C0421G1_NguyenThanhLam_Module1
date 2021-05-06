@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chu Vi Hình Tròn</title>
+</head>
+<body>
+    <h1>Tính chu vi hình tròn</h1>
+    Nhập bán kính hình tròn:
+    <input type="text" id="radius">
+    <button onclick="perimeter()">Tính chu vi</button>
+    <script>
+        function perimeter() {
+            let a = parseFloat(document.getElementById("radius").value);
+            let peri = a*2*3.14;
+
+            alert("Chu vi hình tròn bạn nhập là: "+peri);
+        }
+    </script>
+</body>
+</html>

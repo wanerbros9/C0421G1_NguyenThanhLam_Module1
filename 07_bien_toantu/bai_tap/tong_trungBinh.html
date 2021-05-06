@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Nhập điểm của bạn</h1>
+    Vật lý <br>
+    <input id="physical" type="text"> <br> <br>
+    Hoá học <br>
+    <input id="chemistry" type="text"> <br> <br>
+    Sinh học <br>
+    <input id="biological" type="text"> <br><br>
+
+    <button onclick="total()">Tổng Điểm</button>
+    <script>
+        function total() {
+            let a = parseFloat(document.getElementById("physical").value);
+            let b = parseFloat(document.getElementById("chemistry").value);
+            let c = parseFloat(document.getElementById("biological").value);
+            let sum= a+b+c;
+            let avg= [a+b+c]/3;
+            document.write("Tổng điểm của bạn là: " + sum," <br> Điểm trung bình của bạn là: " +avg);
+        }
+    </script>
+</body>
+</html>

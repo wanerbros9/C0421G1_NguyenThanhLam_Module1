@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện Tích Hình Tròn</title>
+</head>
+<body>
+    <h1>Tính diện tích hình tròn</h1>
+    Nhập bán kính hình tròn:
+    <input type="text" id="radius"> <button onclick="dienTich()">Giá trị </button>
+    <p id="result"></p>
+    <script>
+        function dienTich() {
+            let radius = document.getElementById("radius").value;
+            let dienTich = 3.14*radius*radius;
+
+            // alert("Diện tích hình tròn của bạn là: "+ dienTich);
+            document.getElementById("result").innerText = "Diện tích hình tròn của bạn là: "+ dienTich
+        }
+    </script>
+</body>
+</html>
