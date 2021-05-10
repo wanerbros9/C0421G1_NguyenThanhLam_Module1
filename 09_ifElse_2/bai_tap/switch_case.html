@@ -9,6 +9,7 @@
     Tháng:
     <input type="text" id="month">
     <button onclick="date()">Tính số ngày</button>
+    <p id="ketqua"></p>
     <script>
         function date() {
             let a = parseInt(document.getElementById("month").value);
@@ -20,7 +21,8 @@
                 case 8:
                 case 10:
                 case 12:{
-                    a = document.getElementById("month").value = "Tháng " + a +" có 31 ngày";
+                    a = document.getElementById("ketqua").innerText= "Tháng " + a +" có 31 ngày";
+
                         // document.write("Tháng " + a +" có 31 ngày");
                     break;
                 }
