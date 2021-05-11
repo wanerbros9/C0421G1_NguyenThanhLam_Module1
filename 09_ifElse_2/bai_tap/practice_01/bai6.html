@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Số lượng hàng bạn đã bán:
+    <input type="text" id="sales">
+    <button onclick="interest()">Tiền lãi hoa hồng của bạn là</button>
+    <p id="result"></p>
+    <p id="lai"></p>
+    <script>
+        function interest() {
+            let sales = parseInt(document.getElementById("sales").value);
+            if (sales => '30') {
+                let a = sales + 20;
+                document.getElementById("result").innerText = "Tiền lãi của bạn là " + a;
+            }else if (sales < '30' && sales >= '10') {
+                let b = sales + 15;
+                document.getElementById("result").innerText = "Tiền lãi của bạn là " + b;
+            }else if (sales<'10' && sales>'0') {
+                let c = sales +5;
+                document.getElementById("result").innerText = "Tiền lãi của bạn là " + c;
+            }
+        }
+    </script>
+</body>
+</html>

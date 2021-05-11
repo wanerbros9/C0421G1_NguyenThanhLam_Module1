@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="midterm">
+    <input type="text" id="final">
+    <button onclick="power()">Học lực của bạn là</button>
+    <p id="result"></p>
+    <script>
+        function power() {
+            let a = parseInt(document.getElementById("midterm").value);
+            let b = parseInt(document.getElementById("final").value);
+            let sum = a+b;
+            if ( sum >= '16') {
+                document.getElementById("result").innerText = "Học lực giỏi";
+            }else if (sum <'16' && sum > '11') {
+                document.getElementById("result").innerText = "Học lực khá";
+            }else if (sum > '0' && sum <= '11') {
+                document.getElementById("result").innerText = "Học lực trung bình";
+            }
+        }
+    </script>
+</body>
+</html>

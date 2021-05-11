@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Số phút bạn đã gọi
+    <input type="text" id="minute">
+    <button onclick="moneyPay()">Số tiền phải trả</button>
+    <p id="result"></p>
+    <script>
+        let minute = parseInt(document.getElementById("minute").value);
+        let a = 25000 + [600 * minute];
+        function moneyPay() {
+            if (minute <= '50') {
+                document.getElementById("result").innerText = "Giá: " + a;
+            }
+        }
+    </script>
+</body>
+</html>

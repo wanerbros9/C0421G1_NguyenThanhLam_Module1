@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="numberA" placeholder="a">
+    <input type="text" id="numberB" placeholder="b">
+    <input type="text" id="numberC" placeholder="c">
+    <button onclick="max()">Tìm giá trị lớn nhất</button>
+    <p id="result"></p>
+    <script>
+        function max() {
+            let a = document.getElementById("numberA").value;
+            let b = document.getElementById("numberB").value;
+            let c = document.getElementById("numberC").value;
+            if (a>b && a>c){
+                document.getElementById("result").innerText = "a là số lớn nhất";
+            }else if ( b>a && b>c){
+                document.getElementById("result").innerText = "b là số lớn nhất";
+            }else if (c>a && c>b){
+                document.getElementById("result").innerText = "c là số lớn nhất";
+            }
+        }
+    </script>
+</body>
+</html>

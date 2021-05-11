@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="num">
+    <button onclick="check()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function check() {
+            let a = parseInt(document.getElementById("num").value);
+            if (a >= 0) {
+                document.getElementById("result").innerText = "a là số lớn hơn 0";
+            }else {
+                document.getElementById("result").innerText = "a là số bé hơn 0";
+            }
+        }
+    </script>
+</body>
+</html>
