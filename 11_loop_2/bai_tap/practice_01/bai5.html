@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	let f=0, f0=1, f1;
+	let sum = 0;
+	for(let i = 0; i<20; i++){
+		document.write(f+"<br>");
+		f1 = f+f0;
+		f=f0;
+		f0=f1;
+		sum = f1;
+	}document.write("Tổng = "+sum);
+</script>
+</body>
+</html>

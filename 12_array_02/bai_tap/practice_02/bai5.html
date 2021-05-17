@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	let str1 =prompt("Nhap chuoi 1");
+	let str2 =prompt("Nhap chuoi 2");
+
+	let arrStr1 = str1.split("");
+	let arrStr2 = str2.split("");
+
+	let check = true;
+	if (arrStr1.length == arrStr2.length){
+		for (let i=0;i<arrStr1.length;i++){
+			if (arrStr1[i]!= arrStr2[i]){
+				check=false;
+				break;
+			}
+		}
+	}else {
+		check = false;
+	}
+	if (check){
+		document.write("Hai mang giong nhau");
+	}else {
+		document.write("Hai mang khac nhau")
+	}
+</script>
+</body>
+</html>

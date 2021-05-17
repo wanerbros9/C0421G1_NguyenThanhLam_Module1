@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<script>
+	let f =1, f0 =2, f1=0;
+	let fibonacci = " ";
+	let a =0;
+	while ( a < 1 ){
+		f1 = f0+f;
+		fibonacci += f1+ " ";
+		f++;
+		f0++;
+		if (f1 % 5 ===0){
+			a++;
+			document.write("Số fibonacci chia hết cho 5 là: " +f1);
+			break;
+		}
+	}
+	</script>
+</body>
+</html>

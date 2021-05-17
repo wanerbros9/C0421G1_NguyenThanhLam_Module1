@@ -8,11 +8,11 @@
     <script>
         let bang;
         bang = "<table border='1' width='300' cellpadding='3' cellspacing='0'>";
-        for (let i = 2; i<=9; i++){
+        for (let i = 2; i<=10; i++){
             bang = bang + "<tr>";
-            for (let j = 1; j <=9; j++){
+            for (let j = 2; j <=10; j++){
                 bang = bang + "<td>";
-                    bang = bang +i + "x" + j +"=" + i*j;
+                    bang = bang +j + "x" + i +"=" + j*i;
                 bang = bang +"</td>";
             }bang = bang + "</tr>";
         }bang = bang + "</table>";

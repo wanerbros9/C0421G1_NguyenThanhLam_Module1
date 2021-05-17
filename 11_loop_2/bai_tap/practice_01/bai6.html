@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<script>
+		let a = 1;
+		let count = 0;
+		let sum = 0;
+		while (true){
+			if (a%7===0){
+				document.write(a + ", ");
+				count++;
+				sum+= a;
+			}
+			if (count ===30){
+				document.write("<br>" + "Tong = "+sum);
+				break;
+			}
+			a++;
+		}
+	</script>
+</body>
+</html>
