@@ -5,6 +5,39 @@
 	<title>Title</title>
 </head>
 <body>
-
+	<script>
+		let arr = [234,48,3,47,5];
+		let v = parseInt(prompt("input V: "));
+		let isExist = false;
+		for (let i=0; i < arr.length; i++){
+			if (v === arr[i] ){
+				document.write("V is in Array");
+				isExist = true;
+				arr.splice(v-1,1);
+				arr.push(0);
+				console.log(arr);
+				break;
+			}
+		}
+		if (isExist === false){
+			document.write("V is not in Array");
+		}
+		// let arr = [234,48,3,47,5];
+		// let v = parseInt(prompt("input V: "));
+		// let isExist = false;
+		// for (let i=0; i < arr.length; i++){
+		// 	if (v === arr[i] ){
+		// 		document.write("V is in Array");
+		// 		isExist = true;
+		//
+		// 		for (let i = arr.length-1;i>=arr.length;i--)
+		//
+		// 		break;
+		// 	}
+		// }
+		// if (isExist === false){
+		// 	document.write("V is not in Array");
+		// }
+	</script>
 </body>
 </html>
