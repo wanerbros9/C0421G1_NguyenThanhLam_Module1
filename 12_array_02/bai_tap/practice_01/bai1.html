@@ -8,12 +8,18 @@
     <script>
         let arr = new Array(3);
         let sum = 0;
+        let count = 0;
         for (let i = 0; i < arr.length; i++) {
             arr[i] = parseInt(prompt("Nhap gia tri thu " + i + ": "));
             sum += arr[i];
+            if (arr[i] >= 10){
+            	count++;
+            }
         }
         console.log(arr);
-        document.write("Tong cua day so la: " + sum);
+        document.write("Tong cua day so la: " + sum+"<br>");
+        document.write("Cac so lon hon hoac bang 10 la: "+ count);
+
     </script>
 </body>
 </html>
