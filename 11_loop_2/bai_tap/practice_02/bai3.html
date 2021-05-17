@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<meta charset="UTF-8">
+	<title>Title</title>
 </head>
 <body>
-    <script>
-	    let row = parseInt(prompt("Nhap so hang"));
-	    let column = parseInt(prompt("Nhap so cot"));
-	    for(let i = 1; i <= row; i++){
-		    for (let j = 1; j <= column; j++){
-			    if (i==1||j==1||i==row||j==column){
-				    document.write(" *");
-			    }else {
-				    document.write("&nbsp;&nbsp;&nbsp");
-			    }
-		    }
-		    document.write("<br>")
-	    }
-    </script>
+	<script>
+		let a = "*";
+		for (let i=0;i<5;i++){
+			for(let j=0;j<=i;j++) {
+				document.write(a);
+			}
+			document.write("<br>")
+		}document.write("<br>")
+		for (let m=5;m >0;m--){
+			for (let n=0;n<m;n++){
+				document.write(a);
+			}
+			document.write("<br>");
+		}document.write("<br>")
+		document.write("<p style='width: 40px'align='right'>")
+		for (let p=5;p>0;p--){
+			for (let q=0;q<p;q++){
+				document.write(a);
+			}document.write("<br>")
+		}document.write("<p>")
+		document.write("<p style='width: 40px' align='right'>")
+		for (let u= 0; u < 5; u++){
+			for (let t= 0; t <= u; t++){
+				document.write(a);
+			}document.write("<br>");
+		}document.write("</p>")
+	</script>
 </body>
 </html>
