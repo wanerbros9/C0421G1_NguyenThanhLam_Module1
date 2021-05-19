@@ -6,20 +6,32 @@
 </head>
 <body>
 	<script>
-		let arr1 = new Array(5);
-		let arr2 = new Array(5);
-		let arr = new Array(10);
-		for (let i=0; i<arr1.length;i++){
-			arr1[i] = prompt("Nhap so lieu mang 1: ");
-		}
-		for (let i=0; i<arr2.length;i++){
-			arr2[i] = prompt("Nhap so lieu mang 2: ");
-		}
-		let a = arr1.concat(arr2);
-		console.log(a);
-		// document.write(arr1);
-		// document.write(arr2);
+		//c1
+		// let arr1 = new Array(5);
+		// let arr2 = new Array(5);
+		// let arr = [];
+		// for (let i=0; i<arr1.length;i++){
+		// 	arr1[i] = prompt("Nhap so lieu mang 1: ");
+		// }
+		// for (let i=0; i<arr2.length;i++){
+		// 	arr2[i] = prompt("Nhap so lieu mang 2: ");
+		// }
+		// arr = arr1.concat(arr2);
+		// console.log(arr);
 
+		//c2
+		function push(fromArr, toArr){
+			for (let i=0;i<fromArr.length;i++){
+				toArr.push(fromArr[i]);
+			}
+			return toArr;
+		}
+		let arr1 = [1,2,3,4,5];
+		let arr2 = [6,7,8,9,10];
+		let arr = [];
+		push(arr1,arr);
+		push(arr2,arr);
+		console.log(arr)
 	</script>
 </body>
 </html>
