@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table tbody tr td{
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<!--<table style="border-collapse: collapse">-->
+<!--    <tr>-->
+<!--        <th>Add New Product</th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><input type="text" id="newProduct" placeholder="New Product"></td>-->
+<!--        <td><button id="addPd" onclick="addProduct()">Add</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th>Display All Product</th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Sony Xperia</td>-->
+<!--        <td><button>Edit</button></td>-->
+<!--        <td><button>Delete</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Sony Xperia</td>-->
+<!--        <td><button>Edit</button></td>-->
+<!--        <td><button>Delete</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Samsung Galaxy</td>-->
+<!--        <td><button>Edit</button></td>-->
+<!--        <td><button>Delete</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Nokia 6</td>-->
+<!--        <td><button>Edit</button></td>-->
+<!--        <td><button>Delete</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Xiaomi Redmi Note 4</td>-->
+<!--        <td><button>Edit</button></td>-->
+<!--        <td><button>Delete</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Apple iPhone 6S</td>-->
+<!--        <td><button>Edit</button></td>-->
+<!--        <td><button>Delete</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Xiaomi Mi 5s Plus</td>-->
+<!--        <td><button>Edit</button></td>-->
+<!--        <td><button>Delete</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Apple iPhone 8 Plus</td>-->
+<!--        <td><button>Edit</button></td>-->
+<!--        <td><button>Delete</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Fujitsu F-04E</td>-->
+<!--        <td><button>Edit</button></td>-->
+<!--        <td><button>Delete</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Oppo A71</td>-->
+<!--        <td><button>Edit</button></td>-->
+<!--        <td><button>Delete</button></td>-->
+<!--    </tr>-->
+<!--</table>-->
+<p id="list"></p>
+<script>
+    let arr = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4", "Apple iPhone 6S", "Xiaomi Mi 5s Plus", "Apple iPhone 8 Plus", "Fujitsu F-04E", "Oppo A71"];
+    function showProduct(arr){
+        for (let i=0;i<arr.length;i++){
+            arr[i]+"<br>";
+        }return arr[i];
+    }document.getElementById("list").innerHTML = showProduct(arr)
+    function addProduct(){
+
+    }
+    function renameProduct(){
+
+    }
+    function delProduct(){
+
+    }
+
+</script>
+</body>
+</html>
