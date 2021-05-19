@@ -6,30 +6,28 @@
 </head>
 <body>
 <script>
-    function checkCharacter(arr,a) {
-        let check = true;
-        for (let i=0;i<arr.length;i++){
-            let count = 0;
-            if (a===arr[i]){
-                check = true;
+    function checkCrt(arr, a) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (a == arr[i]) {
                 count++;
-            }else {
-                check = false;
-            }
-            if (check){
-                return a +" xuat hien "+count+" lan";
-            }else {
-                return -1;
+
             }
         }
+        if (count == 0) {
+            return "Ki tu " + a + " khong ton tai";
+        } else {
+            return "ki tu " + a + " xuat hien " + count + " lan";
+        }
     }
-    let a = parseInt(prompt("Nhap so:"))
+
     let arr = new Array(3);
-    for (let i=0;i<3;i++){
-        arr[i] = prompt("Nhap du lieu cho mang: ");
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt("Nhap gia tri " + i);
     }
-    document.write(arr +"<br>");
-    result = document.write(checkCharacter(arr,a));
+    let a = prompt("Nhap ky tu bat ki: ");
+    result = checkCrt(arr, a);
+    document.write(result);
 </script>
 </body>
 </html>
