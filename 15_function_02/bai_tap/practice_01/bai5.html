@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arr2 = ["UrsaMinor", "Taurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"];
+
+        function star(starName){
+            for (let i=0;i<arr1.length;i++){
+                if (starName == arr1[i]){
+                    return arr2[i];
+                }
+            }
+            return "Khong tim thay ngoi sao"
+        }
+        let getStar = prompt("Input star: ")
+        let result = star(getStar);
+        alert(result);
+    </script>
+</body>
+</html>
