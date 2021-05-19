@@ -6,17 +6,30 @@
 </head>
 <body>
 <script>
-    function checkCharacter(arr){
-        let count = 0;
-        for ( let i=0; i<arr.length;i++){
-            count++;
-            if ()
+    function checkCharacter(arr,a) {
+        let check = true;
+        for (let i=0;i<arr.length;i++){
+            let count = 0;
+            if (a===arr[i]){
+                check = true;
+                count++;
+            }else {
+                check = false;
+            }
+            if (check){
+                return a +" xuat hien "+count+" lan";
+            }else {
+                return -1;
+            }
         }
     }
-    let arr = new Array(5);
-    for (let i=0;i<arr.length;i++){
-        arr[i] = prompt("Nhap du lieu cho mang:");
+    let a = parseInt(prompt("Nhap so:"))
+    let arr = new Array(3);
+    for (let i=0;i<3;i++){
+        arr[i] = prompt("Nhap du lieu cho mang: ");
     }
+    document.write(arr +"<br>");
+    result = document.write(checkCharacter(arr,a));
 </script>
 </body>
 </html>

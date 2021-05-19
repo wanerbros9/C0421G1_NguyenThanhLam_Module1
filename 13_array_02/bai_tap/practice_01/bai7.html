@@ -6,22 +6,7 @@
 </head>
 <body>
 	<script>
-		let arr = [234,48,3,47,5];
-		let v = parseInt(prompt("input V: "));
-		let isExist = false;
-		for (let i=0; i < arr.length; i++){
-			if (v === arr[i] ){
-				document.write("V is in Array");
-				isExist = true;
-				arr.splice(v-1,1);
-				arr.push(0);
-				console.log(arr);
-				break;
-			}
-		}
-		if (isExist === false){
-			document.write("V is not in Array");
-		}
+        // c1
 		// let arr = [234,48,3,47,5];
 		// let v = parseInt(prompt("input V: "));
 		// let isExist = false;
@@ -29,15 +14,34 @@
 		// 	if (v === arr[i] ){
 		// 		document.write("V is in Array");
 		// 		isExist = true;
-		//
-		// 		for (let i = arr.length-1;i>=arr.length;i--)
-		//
+		// 		arr.splice(v-1,1);
+		// 		arr.push(0);
+		// 		console.log(arr);
 		// 		break;
 		// 	}
 		// }
 		// if (isExist === false){
 		// 	document.write("V is not in Array");
 		// }
+
+		// c2
+		let arr = [234,48,3,47,5];
+		let v = parseInt(prompt("input V: "));
+		let isExist = false;
+		for (let i=0; i < arr.length; i++) {
+            if (v === arr[i]) {
+                index = i;
+                isExist = true;
+            }
+        }
+		if (isExist === true) {
+            for (let i = index; i < arr.length; i++) {
+                arr[i] = arr[i + 1];
+            }
+        }
+		arr[arr.length-1]=0;
+		document.write(arr);
+
 	</script>
 </body>
 </html>

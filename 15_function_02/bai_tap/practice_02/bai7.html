@@ -6,15 +6,17 @@
 </head>
 <body>
     <script>
-        function twoNumbers(a,b){
-            a = c;
-            b = a;
-            c = b;
+        function swap(a,b){
+            let temp;
+            temp = a;
+            a = b;
+            b = temp;
+            document.write(a+"; "+temp);
         }
         let a = prompt("Nhập a: ");
         let b = prompt("Nhập b: ");
-        let result = twoNumbers(a,b);
-        alert(result);
+        document.write(a+"; "+b+"<br>");
+        swap(a,b);
     </script>
 </body>
 </html>

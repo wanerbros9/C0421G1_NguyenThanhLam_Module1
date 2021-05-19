@@ -11,83 +11,53 @@
     </style>
 </head>
 <body>
-<!--<table style="border-collapse: collapse">-->
-<!--    <tr>-->
-<!--        <th>Add New Product</th>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td><input type="text" id="newProduct" placeholder="New Product"></td>-->
-<!--        <td><button id="addPd" onclick="addProduct()">Add</button></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <th>Display All Product</th>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>Sony Xperia</td>-->
-<!--        <td><button>Edit</button></td>-->
-<!--        <td><button>Delete</button></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>Sony Xperia</td>-->
-<!--        <td><button>Edit</button></td>-->
-<!--        <td><button>Delete</button></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>Samsung Galaxy</td>-->
-<!--        <td><button>Edit</button></td>-->
-<!--        <td><button>Delete</button></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>Nokia 6</td>-->
-<!--        <td><button>Edit</button></td>-->
-<!--        <td><button>Delete</button></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>Xiaomi Redmi Note 4</td>-->
-<!--        <td><button>Edit</button></td>-->
-<!--        <td><button>Delete</button></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>Apple iPhone 6S</td>-->
-<!--        <td><button>Edit</button></td>-->
-<!--        <td><button>Delete</button></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>Xiaomi Mi 5s Plus</td>-->
-<!--        <td><button>Edit</button></td>-->
-<!--        <td><button>Delete</button></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>Apple iPhone 8 Plus</td>-->
-<!--        <td><button>Edit</button></td>-->
-<!--        <td><button>Delete</button></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>Fujitsu F-04E</td>-->
-<!--        <td><button>Edit</button></td>-->
-<!--        <td><button>Delete</button></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>Oppo A71</td>-->
-<!--        <td><button>Edit</button></td>-->
-<!--        <td><button>Delete</button></td>-->
-<!--    </tr>-->
-<!--</table>-->
-<p id="list"></p>
+<h3>Add New Product</h3>
+<input type="text" id="newProduct" placeholder="New Product">
+<button onclick="addProduct()">Add</button>
+<div id="displayTable"></div>
 <script>
-    let arr = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4", "Apple iPhone 6S", "Xiaomi Mi 5s Plus", "Apple iPhone 8 Plus", "Fujitsu F-04E", "Oppo A71"];
-    function showProduct(arr){
-        for (let i=0;i<arr.length;i++){
-            arr[i]+"<br>";
-        }return arr[i];
-    }document.getElementById("list").innerHTML = showProduct(arr)
+    let listProduct = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4", "Apple iPhone 6S", "Xiaomi Mi 5s Plus", "Apple iPhone 8 Plus", "Fujitsu F-04E", "Oppo A71"];
+    function showProduct() {
+        let html =
+            "<table style=\"border-collapse: collapse\">\n" +
+            "    <tr>\n" +
+            "        <th>Display All Product</th>\n" +
+            "    </tr>\n";
+
+        for (let i=0; i<listProduct.length; i++) {
+            html = html +
+                "    <tr>\n" +
+                "        <td>" + listProduct[i] + "</td>\n" +
+                "        <td><button onclick='editProduct("+ i +")'>Edit</button></td>\n" +
+                "        <td><button onclick='delProduct(" + i + ")'>Delete</button></td>\n" +
+                "    </tr>\n";
+        }
+        html = html +
+            "</table>";
+        document.getElementById("displayTable").innerHTML = html;
+    }
+    showProduct();
+
     function addProduct(){
-
+        let newProduct = document.getElementById("newProduct").value;
+        if (newProduct == ""){
+            alert("Khong co gi duoc nhap")
+        }else {
+            listProduct.push(newProduct);
+            showProduct();
+            alert("Add New Product "+ newProduct+ " OK");
+            document.getElementById("newProduct").value = "";
+        }
     }
-    function renameProduct(){
 
+    function delProduct(index){
+        if (confirm("Are you want to delete product "+ listProduct[index]+ " ?")){
+            listProduct.splice(index,1);
+            showProduct();
+        }
     }
-    function delProduct(){
+
+    function editProduct(){
 
     }
 

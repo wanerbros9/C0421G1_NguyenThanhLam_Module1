@@ -6,12 +6,26 @@
 </head>
 <body>
 	<script>
-		let arr = new Array(5);
-		for (let i=0;i<arr.length;i++){
-			arr[i] = prompt("Nhap du lieu: ");
-			arr.sort(function (a, b){return b-a});
-		}
-		document.write(arr);
+        // c1
+		// let arr = new Array(5);
+		// for (let i=0;i<arr.length;i++){
+		// 	arr[i] = prompt("Nhap du lieu: ");
+		// 	arr.sort(function (a, b){return b-a});
+		// }
+		// document.write(arr);
+
+        // c2
+        let arr = [1, 2, 3, 4, 5];
+        for (let i = 0; i < arr.length; i++){
+            for (let j = 0; j < i; j++){
+                if (arr[i] > arr[j]) {
+                    let x = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = x;
+                }
+            }
+        }
+        console.log(arr);
 	</script>
 </body>
 </html>
