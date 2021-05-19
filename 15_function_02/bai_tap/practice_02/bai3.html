@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function factorial(number){
+            let a=1;
+            for (let i=1;i<=number;i++){
+                a = a*i;
+            } return a;
+        }
+        let b = parseInt(prompt("Nhập số cần tính giai thừa: "))
+        let fac = factorial(b);
+        document.write("Giai thừa của "+b+" là "+fac);
+    </script>
+</body>
+</html>
