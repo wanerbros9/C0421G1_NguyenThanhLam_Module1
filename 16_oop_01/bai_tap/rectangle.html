@@ -12,25 +12,33 @@
 <body>
     <canvas id="canvasHTML" width="1000" height="1000"></canvas>
     <script>
-        class Rectangle{
+        class myRectangle{
             constructor(length, width) {
                 this.length = length;
                 this.width = width;
             }
             // tinh chu vi
-            calcPeri(){
-                let result = this.length+this.width;
-                console.log("Chu vi la: "+result+"<br>");
+            // calcPeri(){
+            //     let result = this.length+this.width;
+            //     console.log("Chu vi la: "+result+"<br>");
+            calcPeri(length, width){
+                return length + width;
             }
             //tinh dien tich
-            calcArea(){
-                let result = (this.length+this.width)*2;
-                console.log("Dien tich la: "+result);
+            // calcArea(){
+            //     let result = (this.length+this.width)*2;
+            //     console.log("Dien tich la: "+result);
+            // }
+            calcArea(length, width){
+                return (length+width)*2;
             }
         }
-        let objRec = new Rectangle(a=parseInt(prompt("Nhập chiều dài: ")),b=parseInt(prompt("Nhập chiều rộng: ")));
+        let objRec = new myRectangle(a=parseInt(prompt("Nhập chiều dài: ")),b=parseInt(prompt("Nhập chiều rộng: ")));
         objRec.calcArea();
+        console.log("Diện tích hình chữ nhật là: "+objRec.calcArea(a,b));
         objRec.calcPeri();
+        console.log("Chu vi hình chữ nhật là: "+objRec.calcPeri(a,b));
+
         let canvasHTML = document.getElementById("canvasHTML");
         let canvasContext = canvasHTML.getContext("2d");
         canvasContext.rect(100,100,a,b);
