@@ -6,17 +6,17 @@
 </head>
 <body>
     <script>
-        function S(r){
+        function area(r){
             dientich = 3.14*(r*r);
             return dientich;
         }
-        function C(r){
+        function peri(r){
             chuvi = r*2*3.14;
             return chuvi;
         }
         let radius = parseInt(prompt("Nhập bán kính hình tròn: "));
-        let square = S(radius);
-        let perimeter = C(radius);
+        let square = area(radius);
+        let perimeter = peri(radius);
         document.write("Chu vi hình tròn là "+perimeter+ "<br>");
         document.write("Diện tích hình tròn là: " +square);
     </script>

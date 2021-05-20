@@ -6,17 +6,28 @@
 </head>
 <body>
     <script>
-        function swap(a,b){
-            let temp;
-            temp = a;
-            a = b;
-            b = temp;
-            document.write(a+"; "+temp);
+        // function swap(a,b){
+        //     let temp;
+        //     temp = a;
+        //     a = b;
+        //     b = temp;
+        //     document.write(a+"; "+temp);
+        // }
+        // let a = prompt("Nhập a: ");
+        // let b = prompt("Nhập b: ");
+        // document.write(a+"; "+b+"<br>");
+        // swap(a,b);
+
+        function swap(myArr){
+            let temp = myArr[0];
+            myArr[0] = myArr[1];
+            myArr[1] = temp;
+            document.write(myArr[0]+"; "+temp);
         }
-        let a = prompt("Nhập a: ");
-        let b = prompt("Nhập b: ");
-        document.write(a+"; "+b+"<br>");
-        swap(a,b);
+        let a = parseInt(prompt("input a: "));
+        let b = parseInt(prompt("input b: "));
+        let arr = [a,b];
+        swap(arr)
     </script>
 </body>
 </html>
