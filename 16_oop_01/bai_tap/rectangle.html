@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvasHTML" width="1000" height="1000"></canvas>
+    <script>
+        class Rectangle{
+            constructor(length, width) {
+                this.length = length;
+                this.width = width;
+            }
+            // tinh chu vi
+            calcPeri(){
+                let result = this.length+this.width;
+                console.log("Chu vi la: "+result+"<br>");
+            }
+            //tinh dien tich
+            calcArea(){
+                let result = (this.length+this.width)*2;
+                console.log("Dien tich la: "+result);
+            }
+        }
+        let objRec = new Rectangle(a=parseInt(prompt("Nhập chiều dài: ")),b=parseInt(prompt("Nhập chiều rộng: ")));
+        objRec.calcArea();
+        objRec.calcPeri();
+        let canvasHTML = document.getElementById("canvasHTML");
+        let canvasContext = canvasHTML.getContext("2d");
+        canvasContext.rect(100,100,a,b);
+        canvasContext.stroke();
+        canvasContext.fillStyle = "yellow";
+        canvasContext.fill();
+    </script>
+</body>
+</html>

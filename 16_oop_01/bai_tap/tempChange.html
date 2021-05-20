@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class tempChange{
+            constructor(cTemp) {
+                this.cTemp = cTemp;
+            }
+            celsiusTemp(){
+                document.write("Nhiệt độ hiện tại: "+this.cTemp+"°C"+"<br>");
+            }
+            celsiusToKelvin(){
+                document.write("Độ K là: "+(this.cTemp+273.15)+"°K"+"<br>");
+            }
+            celsiusToFahrenheit(){
+                document.write("Độ F là: "+(this.cTemp*1.8+32)+"°F");
+            }
+        }
+        let obj = new tempChange(parseInt(prompt("Nhập độ °C cần chuyển đổi: ")))
+        obj.celsiusTemp();
+        obj.celsiusToKelvin();
+        obj.celsiusToFahrenheit();
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function checkSymmetric(strParam,i,j){
+            if(i>=j){
+                return true;
+            }else {
+                if (strParam[i] != strParam[j]){
+                    return false;
+                }else {
+                    i++;
+                    j--;
+                    return checkSymmetric(strParam,i,j);
+                }
+            }
+        }
+        let str = "121";
+        let result = checkSymmetric(str,0,str.length-1);
+        console.log(result);
+    </script>
+</body>
+</html>
