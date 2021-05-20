@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkCrt(arr, a) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (a == arr[i]) {
+                count++;
+
+            }
+        }
+        if (count == 0) {
+            return "Ki tu " + a + " khong ton tai";
+        } else {
+            return "ki tu " + a + " xuat hien " + count + " lan";
+        }
+    }
+    let arr = new Array(3);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt("Nhap gia tri " + i);
+    }
+    let a = prompt("Nhap ky tu bat ki: ");
+    result = checkCrt(arr, a);
+    document.write(result);
+</script>
+</body>
+</html>
