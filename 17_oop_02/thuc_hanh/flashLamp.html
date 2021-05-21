@@ -10,51 +10,54 @@
             constructor(energy) {
                 this.energy = energy;
             }
-            getEnergy() {
-                return this.energy
-            }
             setEnergy(energy) {
                 this.energy = energy
+            }
+            decreaseEnergy(energy){
+                if (this.energy>0){
+                    this.energy--;
+                }
+            }
+            getEnergy() {
+                return this.energy
             }
         }
         // khai báo lớp FlashLamp
         class FlashLamp {
             constructor(status, battery) {
-                this.status = status
-                this.battery = battery
+                this.status = status;
+                this.battery = battery;
             }
             getBatteryInfo() {
-                return this.battery.getEnergy();
+                return this.battery.getEnergy()+"%";
             }
-            setEnergy(battery) {
-                this.battery = battery
+            setBattery(battery) {
+                this.battery = battery;
             }
-            checklight() {
+            light() {
                 if(this.status){
                     alert("Lighting");
                 } else {
                     alert("Not lighting");
                 }
-            };
+            }
             turnOn() {
                 this.status = true;
+                this.battery.decreaseEnergy()
             };
             turnOff(){
                 this.status = false;
             }
         }
 
-        let battery = new Battery();
-        battery.setEnergy(10);
-
+        let battery = new Battery(10);
         let flashLamp = new FlashLamp(true,battery);
 
         document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
-        flashLamp.checklight();
-        flashLamp.turnOff();
-        flashLamp.checklight();
+        flashLamp.light();
         flashLamp.turnOn();
-        flashLamp.checklight();
+        document.write("Turn on: "+flashLamp.getBatteryInfo());
+        flashLamp.turnOff()
     </script>
 </body>
 </html>
