@@ -5,6 +5,24 @@
     <title>Title</title>
 </head>
 <body>
+    <script>
+        class mobilePhone{
+            constructor(battery, draft, inBox, sent, status ) {
+                this.battery = battery;
+                this.draft = draft;
+                this.inBox = inBox;
+                this.sent = sent;
+                this.status = status;
+            }
+            CheckOnOff(){
+                if (this.status == true){
+                    alert("Điện thoại bật");
+                }else {
+                    alert("Điện thoại tắt");
+                }
 
+            }
+        }
+    </script>
 </body>
 </html>
