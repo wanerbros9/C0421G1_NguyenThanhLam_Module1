@@ -7,22 +7,25 @@
 <body>
     <script>
         class mobilePhone{
-            constructor(battery, draft, inBox, sent, status ) {
+            constructor(battery, draft, inbox, sent, status ) {
                 this.battery = battery;
                 this.draft = draft;
-                this.inBox = inBox;
+                this.inBox = inbox;
                 this.sent = sent;
                 this.status = status;
             }
             CheckOnOff(){
-                if (this.status == true){
+                if (this.status === "bat"){
                     alert("Điện thoại bật");
                 }else {
                     alert("Điện thoại tắt");
                 }
+                this.battery--;
 
             }
         }
+        let samsung = new mobilePhone(90,"bat");
+        samsung.CheckOnOff()
     </script>
 </body>
 </html>
