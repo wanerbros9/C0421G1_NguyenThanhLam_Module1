@@ -88,6 +88,20 @@
 
     adam.say("Hello");
     eva.say("Hi");
+
+    adam.eat(appleRed);
+    alert("Apple weight: "+appleRed.getWeight());
+
+    eva.eat(appleRed);
+    alert("Apple weight: "+appleRed.getWeight());
+
+    while (appleRed.isEmpty() == false){
+        adam.eat(appleRed);
+        eva.eat(appleRed);
+    }
+    alert("Apple weight: " + appleRed.getWeight());
+    alert("Adam weight: " + adam.getWeight());
+    alert("Eva weight: " + eva.getWeight());
 </script>
 </body>
 </html>
