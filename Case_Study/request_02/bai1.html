@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt("Please enter your salary in million: "));
+    if (salary >= 15){
+        salary=salary-(salary*0.2);
+        document.write("Your salary is: "+salary+" million");
+    }else if (salary<15 && salary >= 7){
+        salary=salary-(salary*0.1);
+        document.write("Your salary is: "+salary+" million");
+    }else {
+        salary=salary-(salary*0.05);
+        document.write("Your salary is: "+salary+" million");
+    }
+</script>
+</body>
+</html>
