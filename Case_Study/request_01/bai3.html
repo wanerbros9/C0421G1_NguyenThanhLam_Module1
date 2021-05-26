@@ -6,18 +6,19 @@
 </head>
 <body>
     <script>
-        let n = 5;
-        let string = "";
-        for (let i = 1; i <= n; i++) {
-            for (let j = n; j > i; j--) {
-                string += " ";
+        let h = 5;
+        for (let i= 1; i<=h; i++){
+            for (let k=h;k>i;k--){
+                document.write("&nbsp;&nbsp;");
             }
-            for (let k = 0; k < i * 2 - 1; k++) {
-                string += "*";
-            }
-            string += "<br>";
+            for (let j=1;j<=i*2-1;j++){
+                if (i == 1||i==h||j==1||j==i*2-1){
+                    document.write("*");
+                }else{
+                    document.write("&nbsp;&nbsp;");
+                }
+            }document.write("</br>")
         }
-        document.write(`<pre>${string}</pre>`);
     </script>
 </body>
 </html>
