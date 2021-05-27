@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    do {
+        let menu = parseInt(prompt("Menu: \n "
+            + "1. Cafe\n"
+            + " 2. Cam Vắt\n"
+            + " 3. Nước ép cà rốt\n"
+            + " 4. Nước ép cà chua\n"
+            + " 5. Nước lọc\n"
+            + " 6. Nước dừa\n"
+            + " 7. Thoát\n"
+        ));
+        let amount = 0;
+        let money = 0;
+        switch (menu) {
+            case(1):
+                amount = parseInt(prompt("Giá 10k. Nhập số lượng: "));
+                money = amount * 10000;
+                alert("Bạn phải trả: " + money);
+                break;
+            case(2):
+                amount = parseInt(prompt("Giá 20k. Nhập số lượng: "));
+                money = amount * 20000;
+                alert("Bạn phải trả: " + money);
+                break;
+            case(3):
+                amount = parseInt(prompt("Giá 30k. Nhập số lượng: "));
+                money = amount * 30000;
+                alert("Bạn phải trả: " + money);
+                break;
+            case(4):
+                amount = parseInt(prompt("Giá 15k. Nhập số lượng: "));
+                money = amount * 15000;
+                alert("Bạn phải trả: " + money);
+                break;
+            case(5):
+                amount = parseInt(prompt("Giá 25k. Nhập số lượng: "));
+                money = amount * 25000;
+                alert("Bạn phải trả: " + money);
+                break;
+            case(6):
+                amount = parseInt(prompt("Giá 35k. Nhập số lượng: "));
+                money = amount * 35000;
+                alert("Bạn phải trả: " + money);
+                break;
+        }
+        if (menu === 7){
+            alert("Tạm biệt");
+            break;
+        }
+    }while (true);
+
+</script>
+</body>
+</html>
