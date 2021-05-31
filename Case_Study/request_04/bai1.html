@@ -5,6 +5,30 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let input = prompt("Nhap ten: ");
+    let myArr = [];
+    function chuanHoaChuoi(str){
+        let arr = str.toLowerCase().split(" ");
+        for (let i=0;i<arr.length;i++){
+            if (arr[i]!==""){
+                arr[i] = arr[i].charAt(0).toUpperCase()+arr[i].substring(1);
+                myArr.push(arr[i]);
+            }
+        }
+        return alert(myArr.join(" "))
+    }
+    function doDaiLonNhat(){
+        let max = myArr[0];
+        for (let i=0;i<myArr.length;i++){
+            if (myArr[i].length>max.length){
+                max = myArr[i]
+            }
+        }
+        alert("Chu dai nhat la: "+max);
+    }
+    chuanHoaChuoi(input);
+    doDaiLonNhat();
+</script>
 </body>
 </html>

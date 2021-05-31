@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt("Nhap so dong: "));
+    let column = parseInt(prompt("Nhap so cot: "));
+    let matrix = [];
+
+    function createMatrix(){
+        for (let i=0;i<row;i++){
+            let row=[];
+            for (let j=0;j<column;j++){
+                row[j] = parseInt(prompt("Nhap so vap ma tran tai toa do ["+i+", "+j+"]"));
+            }
+            matrix[i]=row;
+        }
+        return matrix;
+    }
+
+    function countPrime(matrix){
+        let arrPrime = [];
+        for (let i=0;i<matrix.length;i++){
+            for (let j=0;j<matrix[i];j++){
+                if (checkPrime(matrix[i][j])){
+                    arrPrime.push(matrix[i][j]);
+                }
+            }
+        }
+
+    }
+
+    function checkPrime(number){
+        let count = 0;
+        for (let i=1;i<=number;i++){
+            if (number%i===0){
+                count++;
+            }
+        }if (count==2){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    console.log(createMatrix());
+</script>
+</body>
+</html>
