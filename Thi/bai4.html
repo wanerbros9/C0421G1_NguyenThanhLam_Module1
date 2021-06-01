@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class student {
+        constructor(id, name, birthDay, avgGrade) {
+            this.id = id;
+            this.name = name;
+            this.birthDay = birthDay;
+            this.avgGrade = avgGrade;
+        }
+
+        checkGrade() {
+            if (this.avgGrade > 8) {
+                document.write("Hoc sinh gioi" + "</br>");
+            } else if (this.avgGrade >= 6.5 && this.avgGrade <= 8) {
+                document.write("Hoc sinh kha" + "</br>");
+            } else if (this.avgGrade >= 5 && this.avgGrade < 6.5) {
+                document.write("Hoc sinh trung binh" + "</br>");
+            } else if (this.avgGrade >= 3.5 && this.avgGrade < 5) {
+                document.write("Hoc sinh yeu" + "</br>");
+            } else {
+                document.write("Hoc sinh kem" + "</br>");
+            }
+        }
+
+        checkInfo() {
+            document.write("Id hoc vien: " + this.id + "</br>"
+                + " Ten hoc vien: " + this.name + "</br>"
+                + " Ngay sinh: " + this.birthDay + "</br>"
+                + " Diem trung binh la: " + this.avgGrade + "</br>");
+        }
+    }
+
+    let student1 = new student(1, "Nguyen Van A", 16, 9);
+    let student2 = new student(2, "Nguyen Van N", 25, 2);
+    student1.checkInfo();
+    student1.checkGrade();
+
+    student2.checkInfo();
+    student2.checkGrade();
+</script>
+</body>
+</html>

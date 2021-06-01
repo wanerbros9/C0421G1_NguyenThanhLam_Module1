@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findMaxScore() {
+        let max = arr[0];
+        let index = 0;
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] >= max) {
+                max = arr[i];
+                index = i;
+            }
+        }
+        document.write("So lon nhat la: " + max + " tai index : " + index);
+    }
+
+    let arr = new Array(5);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt("Nhap gia tri tai index " + i);
+    }
+    findMaxScore(arr);
+</script>
+</body>
+</html>

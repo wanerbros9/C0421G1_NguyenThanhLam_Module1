@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = new Array(5);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(prompt("Nhap gia tri thu " + i + ": "));
+    }
+    document.write("Ham chua sap xep: " + arr + "</br>");
+    document.write("Ham da sap xep: " + arr.sort(function (arr,b){
+       return arr-b;
+    }));
+</script>
+</body>
+</html>

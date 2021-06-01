@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isMainNumber(number) {
+        if (number==0){
+            alert(number+" khong la so chinh phuong");
+            return false;
+        }
+        if (Math.sqrt(number) % 1 == 0) {
+            alert(number + " la so chinh phuong");
+        } else {
+            alert(number + " khong la so chinh phuong");
+        }
+    }
+
+    isMainNumber(prompt("nhap so can kiem tra: "));
+    // isMainNumber(10);
+</script>
+</body>
+</html>
